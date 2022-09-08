@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscar cordenadas</title>
+</head>
+<body>
+    <!--action="post" onsubmit="buscarCord()"-->
+    <form name="form">
+        <label for="alt">Altitud</label>
+        <input type="text" id="alt" name="alt">
+        <label for="lon">Longitud</label>
+        <input type="text" id="lon" name="lon">
+        <input type="submit" value="Submit">
+        <!--<input id="clickMe" type="button" value="clickme" onclick="buscarCord();" />-->
+    </form>
+    <div id="map"></div>
+    <!--
+    <script>
+        function buscarCord() {
+            var x = document.forms["form"]["alt"].value;
+            var y = document.forms["form"]["lon"].value;
+
+            var mapa = "http://maps.googleapis.com/maps/api/staticmap?center="
+                + x + "," + y + "&zoom=14&size=500x500&sensor=false";
+            document.getElementById("mapa").innerHTML = "<img src='" + mapa + "'>";
+        }
+    </script>
+    -->
+    
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAfk0gaCgFQjtw_vzcmwMCzlfq04bmlkg4&callback=initMap">
+    </script>
+    <script>
+        var map;
+        function initMap() {
+            map = new google.maps.Map(document.getElementById('map'), {
+                center: { lat: 43.5293, lng: -5.6773 },
+                zoom: 13,
+            });
+            var marker = new google.maps.Marker({
+                position: { lat: -41.40338, lng: 2.17403 },
+                map: map,
+                title: 'Hello'
+            });
+        }
+    </script>
+    
+</body>
+</html>
