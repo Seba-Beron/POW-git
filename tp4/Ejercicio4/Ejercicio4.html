@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Formulario</title>
+	<link href="styles.css" rel="stylesheet" />
+</head>
+<body>
+	<form>
+		<h1>Formulario</h1>
+		<label>Nombre</label>
+		<input type="text" name="nombre" required/>
+
+		<label>Apellido</label>
+		<input type="text" name="apellido"required/>
+
+		<label>DNI</label>
+		<input type="number" name="dni" min="1000000" max="50000000" required/>
+
+		<label>Fecha de Nacimiento</label>
+		<input type="date" name="fecha" max="2016-12-31" required/>
+
+		<label>Edad</label>
+		<input type="number" name="edad" min="1" required/>
+
+		<label>Ciudad</label><!--------------Mapita?-->
+		<input type="text" name="ciudad" required/>
+
+		<label>Codigo Postal</label>
+		<input type="number" name="codigo" min="1000" max="9900" required/>
+
+		<label>Telefono</label>
+		<input type="number" name="telefono" min="111111111111" required/>
+
+		<label>Horario</label>
+		<input type="time" name="horario" min="8:00" max="17:00" required/><!--Aca preferiria restringir los que muestra directamente-->
+
+		<label>Codigo de Color</label>
+		<input type="color" name="color" required/>
+
+		<p>
+		<button>Validar</button>
+	</form>
+</body>
+</html>
+
+<!-- No vombiene utilizar utilizar las opciones de html5 para indicar teléfonos 
+con el tipo “tel” ya que existen multiples formas para escribir un numero de telefono.
