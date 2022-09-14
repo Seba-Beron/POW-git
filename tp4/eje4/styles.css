@@ -1,0 +1,41 @@
+h1{
+	margin-top: 3px;
+	text-align: center;
+	padding-top: 20px;
+	font-weight: 800;
+}
+
+label{
+	font-weight: 1000;
+	display: block;
+	margin-top: 10px;
+	margin-left: 10%;
+}
+form{
+	background-color: lightgreen;
+	border-radius: 7px;
+	width: 30%;
+	margin: 0 auto;
+}
+
+input,select{
+	background: #F4F7F8;
+	width: 80%;
+	height: 40px;
+	border: none;
+	margin-left: 10%;
+	margin-bottom: 10px;
+}
+select{
+	margin-bottom: 25px;
+}
+
+button{
+	font-size: 25px;
+
+	color: white;
+	width: 100%;
+	height: 50px;	
+	background: lightseagreen;
+	border: none;
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Formulario</title>
+	<link href="styles.css" rel="stylesheet" />
+</head>
+
+<body>
+	<form>
+		<h1>Formulario</h1>
+		<label>Nombre</label>
+		<input type="text" name="nombre" id="name"/>
+
+		<label>Apellido</label>
+		<input type="text" name="apellido" />
+
+		<label>DNI</label>
+		<input type="number" name="dni" id="dni" />
+
+		<label>E-mail</label>
+		<input type="email" id="email">
+
+		<label>Fecha de Nacimiento</label>
+		<input type="date" name="fecha" id="birth-date" />
+
+		<label>Edad</label>
+		<input type="number" name="edad" min="1" />
+
+		<label>Ciudad</label>
+		<input type="text" name="ciudad" />
+
+		<label>Codigo Postal</label>
+		<input type="number" name="codigo" />
+
+		<label>Telefono</label>
+		<input type="number" name="telefono" />
+
+		<label>Horario</label>
+		<input type="time" name="horario" />
+
+		<label>Codigo de Color</label>
+		<input type="color" name="color" />
+
+		<button>Validar</button>
+	</form>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+<script>
+	$('#dni').mask('999-999');
+	$(document).ready(function () {
+		
+		$('#birth-date').mask('00/00/0000');
+	});
+</script>
+
+</html>
