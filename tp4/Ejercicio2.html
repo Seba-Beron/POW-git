@@ -7,29 +7,16 @@
     <title>Buscar cordenadas</title>
 </head>
 <body>
-    <!--action="post" onsubmit="buscarCord()"-->
     <form name="form">
         <label for="alt">Altitud</label>
         <input type="text" id="alt" name="alt">
         <label for="lon">Longitud</label>
         <input type="text" id="lon" name="lon">
-        <input type="submit" value="Submit">
-        <!--<input id="clickMe" type="button" value="clickme" onclick="buscarCord();" />-->
+        <input id="clickMe" type="button" value="clickme" onclick="initMap();" />
     </form>
-    <div id="map"></div>
-    <!--
-    <script>
-        function buscarCord() {
-            var x = document.forms["form"]["alt"].value;
-            var y = document.forms["form"]["lon"].value;
-
-            var mapa = "http://maps.googleapis.com/maps/api/staticmap?center="
-                + x + "," + y + "&zoom=14&size=500x500&sensor=false";
-            document.getElementById("mapa").innerHTML = "<img src='" + mapa + "'>";
-        }
-    </script>
-    -->
-    
+    <div id="map">
+        <!--aca ira el mapa-->
+    </div>
     <script async defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAfk0gaCgFQjtw_vzcmwMCzlfq04bmlkg4&callback=initMap">
     </script>
@@ -43,7 +30,7 @@
             var marker = new google.maps.Marker({
                 position: { lat: -41.40338, lng: 2.17403 },
                 map: map,
-                title: 'Hello'
+                title: 'Mapa'
             });
         }
     </script>
