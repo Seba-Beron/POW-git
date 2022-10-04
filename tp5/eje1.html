@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1</title>
+</head>
+<body>
+    <h1>Ejercicio 1</h1>
+    <div class="contenido"></div>
+</body> 
+<script> 
+    const div = document.querySelector(".contenido");
+    const hoy = new Date();
+    function formatoFecha(fecha, formato) {
+        const map = {
+            dd: fecha.getDate(),
+            mm: fecha.getMonth() + 1,
+            yy: fecha.getFullYear().toString().slice(-2),
+            yyyy: fecha.getFullYear()
+        }
+        return formato.replace(/dd|mm|yy|yyy/gi, matched => map[matched])
+    }
+    //podemos cambiar el formato del dia con la funcion
+    div.innerHTML = "<H1>Hoy es: " + formatoFecha(hoy, 'dd-mm-yyyy') + "</H1>" +
+    "<h1>La hora es:  " + hoy.getHours() + ":" + hoy.getMinutes() + ":" + hoy.getSeconds() + "</h1>";
+</script>
+</html>

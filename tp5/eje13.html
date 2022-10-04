@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 13</title>
+</head>
+<body>
+    <h1>Ejercicio 13</h1>
+    <p>ingrese su CUIT a continuacion:</p>
+    <label for="entrada">CUIT o CUIL</label>
+    <input type="number" id="entrada">
+    <button type="button" onclick="validar()">verificar</button>
+    <p id="salida"></p>
+</body>
+<script type="text/javascript">
+
+    const validarCuit = () => {
+
+        var input = document.getElementById("entrada");
+        var cuit = input.value;
+
+        if (cuit.length != 11) {
+            return false;
+        }
+
+        var acumulado = 0;
+        var digitos = cuit.split(""); // separo el numero en una cadena de digitos
+        var digito = digitos.pop(); // elimino el ultimo que es el numero de verificacion
+
+        // la serie numerica se puede escribir de forma 2 + (i % 6)
+        for (var i = 0; i < digitos.length; i++) {
+            acumulado += digitos[9 - i] * (2 + (i % 6));    // sumo los resultados de las multipliaciones
+        }
+
+        var verif = 11 - (acumulado % 11);
+
+        if (verif == 11) {
+            verif = 0;
+        } else if (verif == 10) {
+
+            var t = parseInt(cuit / (10 ** 9)); // tomo el tipo
+            var cuit_nuevo = 0;
+
+            if( t != 33 && t != 23){    // lo cambio por 33 o 23
+                cuit_nuevo = 23;
+            }
+            else if(t == 23){
+                cuit_nuevo = 33;
+            }
+            else{
+                return false;
+            }
+            
+            for(var i = 2 ; i <= 9 ; i++){  // armo el nuevo cuit
+                cuit_nuevo += digitos[i];
+            }
+            cuit_nuevo += digito;
+
+            input.value = cuit_nuevo
+            console.log(cuit," - ", document.getElementById("entrada").value);
+            return validarCuit();
+            //verif = 9; esto es incorrecto
+        }
+        return digito == verif;
+    }
+
+    const validar = () => {
+        document.getElementById("salida").innerHTML = validarCuit();
+    }
+</script>
+</html>
