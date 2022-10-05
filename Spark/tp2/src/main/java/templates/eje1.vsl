@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html> 
+	<head> 
+		<title>Ejercicio 1</title>
+	</head> 
+	<body>
+		
+		<!--<input type="text" value="$!{num}" />-->
+		<div id="entrada">
+			#foreach ($num in $numeros)
+				<label for="num">Numero : </label>
+				<input type="text" value="$!{num}" />
+			#end
+		</div>
+		<div id="salida">
+			<h2>Cantidad de numeros: $nums.size()</h2>
+			<p>Lista de numeros: </p>
+			#set ( $n = 1)
+			#foreach ($num in $numeros)
+				<tr>
+					<td>$n</td>
+					<td>$num</td>
+				</tr>
+				#set ( $n += 1)
+			#end
+		</div>
+		
+		
+
+		<button>Ordenar</button>
+		<button>Desordenar</button>
+
+	</body>
+</html>
