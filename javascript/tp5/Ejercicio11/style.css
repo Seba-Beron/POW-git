@@ -1,0 +1,11 @@
+div.interacciones{
+	padding-top: 7px;
+	padding-bottom: 7px;
+}
+div.contenedor{
+	border: solid;
+	text-align: center;
+	margin-left: 35%; 
+	margin-right: 35%; 
+	padding: 7px;
+}

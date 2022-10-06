@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="">Palabra</label>
+    <input type="text" id="entrada">
+    <button onclick="capicua()">verificar</button>
+</body>
+<script>
+    const capicua = () => {
+
+        var p = document.getElementById("entrada").value;
+        const caracteres = p.split("");
+        let i = 0;
+        
+        caracteres.forEach(e => {i += 1;});
+
+        if(i == 0){
+            console.log("  No ingreso ninguna palabra");
+        }
+        else if(i == 1){
+            console.log(" La palabra contiene solo un caracter.");
+        }
+        else{
+            if(caracteres.join("") == caracteres.reverse().join("")){
+                console.log(`la palabra contiene ${i} caracteres y es capicúa`);
+            }
+            else{
+                console.log(`la palabra contiene ${i} caracteres y no es capicúa`);
+            }
+        }
+    };
+</script>
+</html>

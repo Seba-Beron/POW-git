@@ -1,0 +1,19 @@
+div.reloj{
+	background: purple;
+
+	padding: 40px 60px;
+	margin-left: 35%;
+	margin-right: 35%;
+	margin-top: 13%;
+
+	border-radius: 10px;
+}
+
+
+div.fecha{
+	margin-top: 7px ;
+	background: slateblue;
+	text-align: center;
+	font-size: 100px;
+	border-radius: 10px;
+}
