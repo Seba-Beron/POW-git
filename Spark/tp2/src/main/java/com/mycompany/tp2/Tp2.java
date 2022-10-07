@@ -14,7 +14,13 @@ import static spark.Spark.get;
 public class Tp2 {
 
     public static void main(String[] args) {
-        //get("/getNumeros", eje1.getNums); 
-        get("/prueba", prueba.get); 
+        // ejericio 1
+        get("/inicio",ComparadorControlador.inicio); //funcion principal
+        get("/ordenar",ComparadorControlador.ordenar); // funciones secundarias que va a llamar el form.vsl
+        get("/desordenar",ComparadorControlador.desordenar); // funciones secundarias que va a llamar el form.vsl
+        // ejericio 2
+        get("/inicioI",masaCorporalControlador.inicio); 
+        get("/calcularIndiceMC",masaCorporalControlador.calcularIndiceMC); 
+        
     }
 }
