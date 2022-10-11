@@ -14,13 +14,17 @@ import static spark.Spark.get;
 public class Tp2 {
 
     public static void main(String[] args) {
-        // ejericio 1
+        //Ejericio 1
         get("/inicio",ComparadorControlador.inicio); //funcion principal
         get("/ordenar",ComparadorControlador.ordenar); // funciones secundarias que va a llamar el form.vsl
         get("/desordenar",ComparadorControlador.desordenar); // funciones secundarias que va a llamar el form.vsl
-        // ejericio 2
+        //Ejericio 2
         get("/inicioI",masaCorporalControlador.inicio); 
         get("/calcularIndiceMC",masaCorporalControlador.calcularIndiceMC); 
+        
+        //Ejercicio 4
+         get("/perimetroyarea", RadioControlador.CalcPerimeter);
+        //http://localhost:4567/perimetroyarea?radio=6
         
     }
 }

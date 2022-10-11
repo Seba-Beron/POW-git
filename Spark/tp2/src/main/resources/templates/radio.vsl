@@ -1,0 +1,31 @@
+<style>
+   .circulo {
+        width: 100px;
+        height: 100px;
+        -moz-border-radius: 50%;
+        -webkit-border-radius: 50%;
+        border-radius: 50%;
+        background: #5cb85c;
+       border: 3px solid green;
+      }
+</style>
+<center>
+   <p> <b>Datos: </b>
+     <b> Radio:</b> $!radio <b>Perímetro:</b> $!perimetro <b>Área:</b> $!area 
+   </p>
+   <p> <b>Representación</b></p>
+   <div id='div1'>
+      <div class="circulo"></div>
+   </div>
+</center>
+<script>
+   function mostrarCirculo(){
+   if(parseFloat($radio)<240){ 
+        circulo = document.getElementsByClassName('circulo')[0];
+        circulo.style.width = ($radio) +'px';
+        circulo.style.height = ($radio)+'px';
+   }
+   else document.getElementById("div1").innerHTML = '<p> No soportada por tamaño mayor a 480px. </p>';
+   }
+   mostrarCirculo(div1);
+</script>
