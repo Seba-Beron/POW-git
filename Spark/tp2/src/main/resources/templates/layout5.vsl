@@ -1,0 +1,11 @@
+## Velocity Template.
+## colocar un encabezado fijo 
+
+#include ("templates/encabezado5.html")
+ <body>
+   #parse( $template )
+ </body>
+#include("templates/pie5.html")
+
+
+ 
