@@ -1,0 +1,9 @@
+## Velocity Template.
+<CENTER>
+    <form action='/getPersonas' method='get'>
+      <div class="form-group">
+            <h1>Arbol familiar</h1> 
+            <button type="submit" class="btn">Mostrar todas las personas</button>
+      </div>
+    </form> 
+</CENTER> 

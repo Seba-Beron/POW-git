@@ -18,13 +18,29 @@ public class Tp2 {
         get("/inicio",ComparadorControlador.inicio); //funcion principal
         get("/ordenar",ComparadorControlador.ordenar); // funciones secundarias que va a llamar el form.vsl
         get("/desordenar",ComparadorControlador.desordenar); // funciones secundarias que va a llamar el form.vsl
+        
         //Ejericio 2
         get("/inicioI",masaCorporalControlador.inicio); 
         get("/calcularIndiceMC",masaCorporalControlador.calcularIndiceMC); 
         
+        //Ejercicio 3
+        get("/inicioPersonas", PersonaControlador.inicio);
+        get("/getPersonas", PersonaControlador.getPersonas); 
+        get("/getHijos", PersonaControlador.getHijos); 
+        get("/getNietos", PersonaControlador.getNietos); 
+        get("/getPadres", PersonaControlador.getPadres);
+        get("/getHermanos", PersonaControlador.getHermanos);
+        get("/getTios", PersonaControlador.getTios);
+        
         //Ejercicio 4
          get("/perimetroyarea", RadioControlador.CalcPerimeter);
         //http://localhost:4567/perimetroyarea?radio=6
+        
+        //Ejercicio 5
+        get("/inicioCalc",CalculadoraControlador.inicio); 
+        get("/calcular",CalculadoraControlador.calcular); 
+        
+        
         
     }
 }

@@ -2,12 +2,11 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package com.mycompany.Ejercicio5;
+package com.mycompany.tp2;
 
 import java.util.HashMap; 
 import spark.ModelAndView;
 import spark.template.velocity.VelocityTemplateEngine;
-
 
 import spark.Request;
 import spark.Response;
