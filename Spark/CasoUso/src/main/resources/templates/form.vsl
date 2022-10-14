@@ -1,0 +1,28 @@
+## Velocity Template.
+
+
+<main class="container">
+	<div class="row centered">
+		<div class="col">
+			<article class="card">
+				<div class="card-header">
+					Productos
+				</div>
+				<div class="card-body">
+                                        #if($!{agregado}) <h1>El producto ah sido agregado al carrito</h1> #end
+                                        #foreach($p in $productos)
+                                            <form action='/agregarAlCarito' method='get'>
+						<p>Precio $!p.getPrecio()</p>
+						<div>
+                                                        <label for="$foreach.count">cantidad $foreach.count</label>
+                                                        <input type="number" name="id" value="$!{foreach.count}" required hidden>
+							<input type="number" name="cantidad" value="$!{cantidad}" required>
+                                                        <button class="btn waves-effect waves-light" type="submit">Agregar al carrito</button>
+						</div>	
+                                            </form>
+                                        #end
+				</div>
+			</article>
+		</div>
+	</div>
+</main>

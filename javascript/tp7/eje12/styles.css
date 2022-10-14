@@ -1,0 +1,22 @@
+body{
+    background-image: url(recursos/madera2.jpg);
+}
+
+.articulo{
+    width: 360px;
+    margin: 0 auto;
+}
+
+.img{
+    margin: 0 auto;
+}
+
+img{
+    height: 220px;
+    width: 360px;
+}
+
+.descripcion{
+    padding: 5%;
+    background-color: white;
+}

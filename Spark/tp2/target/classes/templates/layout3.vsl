@@ -1,0 +1,54 @@
+## Velocity Template.
+<!DOCTYPE html>
+<html>  
+<head>   
+<title>Arbol Familiar</title>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
+#include ("templates/encabezado.html")
+</head>  
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+            <a class="navbar-brand" href=/inicioPersonas>Arbol Familiar</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="contenedor">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href=/inicioPersonas>Inicio<span class="sr-only"></span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href=/getPersonas>Todos<span class="sr-only"></span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href=/getHijos>Hijos </a></li><span class="sr-only"></span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href=/getNietos?nombre=>Nietos</a></li><span class="sr-only"></span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href=/getHermanos?nombre=>Hermanos<span class="sr-only"></span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href=/getPadres?nombre=>Padres<span class="sr-only"></span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href=/getTios?nombre=>Tios</a></li><span class="sr-only"></span></a>
+                    </li>
+                </ul>
+                <br>
+            </div>
+        </nav>
+    </header>
+
+ #parse( $template )
+ </body>
+#include("templates/pie.html")
+</html>
+
+

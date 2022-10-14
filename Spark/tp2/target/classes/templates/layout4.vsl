@@ -1,0 +1,9 @@
+<br>
+<br>
+<br>
+<center>
+   <form>
+      <input type="text" name="radio" placeholder="Radio en píxeles"  pattern="[0-9]+([\.,][0-9]+)?" required>
+   </form>
+   #parse( $template )
+</center>

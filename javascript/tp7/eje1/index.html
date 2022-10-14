@@ -11,15 +11,7 @@
     <div class="contenido"></div>
 </body>
 <script>
-    const div = document.querySelector(".contenido");
-    /*    
-    const navegadores = ['opera', 'chrome', 'safari', 'firefox'];
-    navegadores.forEach(element => {
-        if (navigator.userAgent.toLowerCase().indexOf(element) > -1) {
-            console.log(element);
-        }
-    });
-    */
+    
     var getBrowserInfo = function () {
             let ua = navigator.userAgent, 
                 tem,
@@ -36,9 +28,27 @@
             if ((tem = ua.match(/version\/(\d+)/i)) != null) M.splice(1, 1, tem[1]);
             return M.join(' ');
         };
-    
+
+    const div = document.querySelector(".contenido");
     div.innerHTML = "<H1>Tu navegador es: " + getBrowserInfo() + "</H1>";
-    console.log(navigator.userAgent +" | "+ navigator.appVersion);
+
+    let head = document.getElementsByTagName('HEAD')[0];
     
+    // creo el elemento link
+    let link = document.createElement('link');
+    // seteo los atributos
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    
+    if (getBrowserInfo().indexOf('Chrome') > -1) {
+        link.href = 'Chrome.css';    
+    }
+    else if (getBrowserInfo().indexOf('Edge') > -1) {
+        link.href = 'Edge.css';
+    }
+    
+    // agrego el link al head
+    head.appendChild(link); 
+
 </script>
 </html>

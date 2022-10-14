@@ -1,0 +1,27 @@
+<form action='/getHermanos' method='get'>
+    <div class="container">
+        <div class="row text-center m-3">
+            <div class="col-12">
+                <h1>Buscar</h1>
+            </div>
+            <div class="col-md-3"></div>
+                <input id="nombre" name="nombre" class="form-control col-md-3" type="text">
+                <input id="apellido" name="apellido" class="form-control col-md-3" type="text">
+                <button class="btn btn-outline-success col-md-3" type="submit">Buscar</button>
+        </div>
+    </div>
+</form>
+
+<CENTER><B>Cantidad de hermanos: $hermanos.size()</B></CENTER>
+<BR/> <BR/>
+<div class="container marketing ">
+    <div class="row m-3">
+    #set( $cuenta = 1 )  
+    #foreach( $p in $hermanos )           
+    <div class="col-lg-4 text-center">
+        <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="data:image/jpeg;base64,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" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 140x140"></img>
+        <h2>$p.getNombre() $p.getApellido()</h2>
+    </div>
+    #set( $cuenta = $cuenta + 1 )
+    #end
+</div>
