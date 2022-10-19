@@ -6,7 +6,6 @@ import org.sql2o.*;
 public class UserDAO {
     private List<User> usuarios;
     
-    
     public List<User> verificarPersona( String email, String pass) {
         
         Sql2o sql2o = new Sql2o("jdbc:mysql://localhost:3306/spark3?serverTimezone=UTC", "root", "admin");

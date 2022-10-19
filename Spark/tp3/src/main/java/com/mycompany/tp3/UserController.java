@@ -27,7 +27,7 @@ public class UserController {
                 if(!user.isEmpty()){
                     model.put("template", "templates/main.vsl");
                     User usuarioLogeado = user.get(0);
-                    req.session(true);                     // Crear y retornar la sesion
+                    req.session(true);       
                     req.session().attribute("id", usuarioLogeado.getId() );       // Seteamos atributo
                     req.session().attribute("email", usuarioLogeado.getEmail() ); // Seteamos atributo
                     res.redirect("/index");
