@@ -1,11 +1,31 @@
 ## Velocity Template.
-## colocar un encabezado fijo 
-
-#include ("templates/encabezado.html")
- <body>
-   #parse( $template )
+<!DOCTYPE html>
+<html>  
+<head>   
+ <title>Campeonato de Futbol</title>
+<!-- Usa Framework Boostrap en linea -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>  
+  <body>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <a class="navbar-brand" href="#">Campeonato de Futbol</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+            #foreach ($m is $menu)
+              <li class="nav-item 
+                    #if ($m.url == $menuActivo)
+                        active
+                    #end
+                ">
+                <a class="nav-link" href="$m.url">$m.label</a>
+              </li>
+            #end
+            </ul>
+          </div>
+        </nav>
+    #parse( $template )
  </body>
-#include("templates/pie.html")
-
-
- 
+</html>

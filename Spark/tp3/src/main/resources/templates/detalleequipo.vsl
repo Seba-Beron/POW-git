@@ -1,0 +1,21 @@
+##SET POST PARAMS
+
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+        <img src="resources/img/spark.jpeg">
+        <h1> POW </h1>
+        <h2> Socios:11111 </h2>
+        <h1 class="display-4">Plantilla</h1>
+        #foreach( $j in $jugadores )
+           <div style="background-color:white;"> 
+               <img src=resources/img/$j.getNombre().jpeg>
+               <h1> Numero: $j.getNumero() </h1> <p></p>
+               <h2> $j.getNombre() $j.getApellido() </h2> <p></p>
+               <h2> Posicion: $j.getPosicion() </h2> <p></h2>
+               <h2> Fecha de Nacimiento: $j.getNacimiento() </h2> <p></p>
+               <a href=detallejugador?nombre=$j.getNombre()>Ver Ficha del jugador</a> <p>
+           </div>
+        #end
+         <p> Historia: POW History </p>
+    </div>
+</div>

@@ -1,0 +1,7 @@
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4">Bienvenidos al sistema!</h1>
+    <p class="lead">Bienvenid@ $email-usuario! esta es la pagina main.  
+    </p>
+  </div>
+</div>
