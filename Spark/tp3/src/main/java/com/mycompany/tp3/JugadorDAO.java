@@ -11,11 +11,9 @@ public class JugadorDAO {
         Jugador a=new Jugador("Guillermo", "La Fuente","pow", "9", "Delantero Centro", "0000-00-00");
         Jugador b=new Jugador("Gustavo", "La Fuente", "pow", "1", "Arquero", "0000-00-00");
         Jugador c=new Jugador("Dino", "Cisterna","pow", "5", "Mediocampista Centro", "0000-00-00");
-        
         jugadores.add(a); 
         jugadores.add(b); 
         jugadores.add(c);
-        
     }
     
     public List<Jugador> getListaEquipos(){

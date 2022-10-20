@@ -5,7 +5,7 @@
         <h1 class="display-4">Equipos</h1>
         #foreach( $j in $jugadores )
             <div style="background-color:white;">
-                <img src=spark.jpeg>
+                <img src = spark.jpeg>
                 <h1> $j.getEquipo() </h1>
                 <a href=detalleequipo?nombre=$j.getEquipo()>Mas informacion!</a> <p>
             </div>
