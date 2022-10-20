@@ -6,7 +6,7 @@ import static spark.Spark.staticFiles;
 
 public class Tp3 {
     public static void main(String[] args) {
-        staticFiles.location("/local");
+        staticFiles.location("/img");
         get("/login", UserController.getLogin); 
         post("/login", UserController.getLogin);
         get("/logout", UserController.Logout); 
