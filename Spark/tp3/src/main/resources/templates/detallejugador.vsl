@@ -2,7 +2,7 @@
 
 <div class="jumbotron jumbotron-fluid">
     <div class="container">
-       <img src = $jugadores[0].getNombre().jpg>
+       <img src = "$!{jugadores[0].getNombre()}.jpg">
        <h1>$jugadores[0].getNombre() $jugadores[0].getApellido()</h1> <p></p>
        <h2> Numero: $jugadores[0].getNumero() </h2> <p></p>
        <h2> Posicion: $jugadores[0].getPosicion() </h2> <p></p>

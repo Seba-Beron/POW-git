@@ -8,7 +8,7 @@
         <h1 class="display-4">Plantilla</h1>
         #foreach( $j in $jugadores )
            <div style="background-color:white;"> 
-               <img src = "$j.getNombre().jpg">
+               <img src = "$!{j.getNombre()}.jpg">
                <h1> Numero: $j.getNumero() </h1> <p></p>
                <h2> $j.getNombre() $j.getApellido() </h2> <p></p>
                <h2> Posicion: $j.getPosicion() </h2> <p></h2>
