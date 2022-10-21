@@ -12,10 +12,6 @@ import spark.Response;
 import spark.Route;
 import spark.template.velocity.VelocityTemplateEngine;
 
-/**
- *
- * @author Sebastian
- */
 public class EquipoController {
      public static Route getEquipos = (Request req, Response res) -> {
         EquipoDAO eDAO = new EquipoDAO();

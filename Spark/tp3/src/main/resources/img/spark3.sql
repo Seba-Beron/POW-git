@@ -14,7 +14,7 @@ CREATE TABLE IF NOT EXISTS `jugador` (
   INDEX `fk_jugador_equipo_idx` (`equipo_idEquipo` ASC) VISIBLE,
   CONSTRAINT `fk_jugador_equipo`
     FOREIGN KEY (`equipo_idEquipo`)
-    REFERENCES `reemplazo`.`equipo` (`idEquipo`)
+    REFERENCES `spark3`.`equipo` (`idEquipo`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION);
 
@@ -26,7 +26,8 @@ CREATE TABLE IF NOT EXISTS `equipo` (
 INSERT INTO `usuario` (`id`, `email`, `pass`) VALUES
 (1, 'admin@gmail.com', 'admin');
 
-INSERT INTO `jugador` (`id`, `nombre`, `posicion`, `fechaNacimiento`,`equipo_idEquipo`) VALUES
-(7, 'Juli', 'defensa', '15/07/2001',123);
+INSERT INTO `equipo` (`idEquipo`, `nombre`) VALUES
+(1, 'Loxston FC');
 
-SELECT * FROM jugadores WHERE equipo_idEquipo = 123
+INSERT INTO `jugador` (`id`, `nombre`, `posicion`, `fechaNacimiento`,`equipo_idEquipo`) VALUES
+(7, 'Juli', 'defensa', '15/07/2001',1);

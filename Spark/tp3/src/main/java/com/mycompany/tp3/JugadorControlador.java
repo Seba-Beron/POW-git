@@ -12,22 +12,7 @@ import spark.template.velocity.VelocityTemplateEngine;
  * @author Usuario
  */
 public class JugadorControlador {
-    
-    /*public static Route getListaEquipos = (Request request, Response response) -> {
-        JugadorDAO pDAO = new JugadorDAO(); 
-        List<Jugador> j = pDAO.getListaEquipos();
-        
-        HashMap model = new HashMap();
-        model.put("jugadores", j);
-        model.put("template", "templates/listaequipos.vsl");
-        
-        Menu menu = new Menu();
-        model.put("menu", menu.getMenu());  
-        model.put("menuActivo", "listaequipos");
-                
-        return new VelocityTemplateEngine().render(new ModelAndView(model, "templates/layout.vsl"));
-    }; lo mande a equipo */
-    
+
     public static Route getDetalleEquipo = (Request request, Response response) -> {
         JugadorDAO pDAO = new JugadorDAO(); 
         String idEquipo = request.queryParams("idEquipo");

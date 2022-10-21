@@ -11,7 +11,6 @@ public class Tp3 {
         post("/login", UserController.getLogin);
         get("/logout", UserController.Logout); 
         get("/index", IndexController.getIndex);
-        //get("/listaequipos", JugadorControlador.getListaEquipos); 
         get("/detalleequipo", JugadorControlador.getDetalleEquipo); 
         get("/detallejugador", JugadorControlador.getDetalleJugador);
         get("/listaequipos", EquipoController.getEquipos);

@@ -8,7 +8,7 @@ public class UserDAO {
     
     public List<User> verificarPersona( String email, String pass) {
         
-        Sql2o sql2o = new Sql2o("jdbc:mysql://localhost:3306/reemplazo?serverTimezone=UTC", "root", "admin");
+        Sql2o sql2o = new Sql2o("jdbc:mysql://localhost:3306/spark3?serverTimezone=UTC", "root", "admin");
          
         try (Connection con = sql2o.open()) {
             
