@@ -1,0 +1,14 @@
+##SET POST PARAMS
+
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+        <h1 class="display-4">Equipos</h1>
+        #foreach( $j in $equipos )
+            <div style="background-color: white; margin-right: 70%; text-align:center;">
+                <img src = "spark.jpeg">
+                <h1> $j.getNombre() </h1>
+                <a href=detalleequipo?idEquipo=$j.getIdEquipo() class="btn btn-primary">Mas informacion!</a> <p>
+            </div>
+        #end
+    </div>
+</div>

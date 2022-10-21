@@ -1,0 +1,11 @@
+##SET POST PARAMS
+
+<div class="jumbotron jumbotron-fluid">
+    <div class="container" style="text-align:center;" >
+       <img  src = "$!{jugadores[0].getNombre()}.jpg" height="100px" weight="100px">
+       <h1>$jugadores[0].getNombre() </h1> <p></p>
+       <h2> Numero: $jugadores[0].getId() </h2> <p></p>
+       <h2> Posicion: $jugadores[0].getPosicion() </h2> <p></p>
+       <h2> Fecha de Nacimiento: $jugadores[0].getFechaNacimiento() </h2> <p></p>
+    </div>
+</div>
